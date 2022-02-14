@@ -1,0 +1,6 @@
+stage('Checkout') {
+        steps {
+            git branch: 'main'
+                url: 'ssh://git@test.com/proj/test_proj.git'
+        }
+    }
