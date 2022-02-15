@@ -1,17 +1,13 @@
-stage('Checkout') {
-        steps {
-            git branch: 'main'
-                url: 'ssh://git@test.com/proj/test_proj.git'
-        }
-    }
-
-
-
 
 pipeline {
 
-    agent {
-        label "master"
+    agent any
+    
+stage('Checkout') {
+        steps {
+            git branch: 'main'
+                url: 'github url'
+        }
     }
 
     tools {
